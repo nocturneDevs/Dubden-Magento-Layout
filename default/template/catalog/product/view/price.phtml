@@ -23,12 +23,12 @@
  * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+ 
+/**
+ * @deprecated  after 1.4.0.0-alpha3
+ */
 ?>
-</div>
-<div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p>
-        <address><?php echo $this->getCopyright() ?></address>
-    </div>
+<div class="price-box" id="product_price">
+    <p class="old-price"><?php echo $this->__('Old Price:') ?> <?php echo $this->getPrice() ?></p>
+    <p class="special-price"><?php echo $this->getPrice() ?></p>
 </div>

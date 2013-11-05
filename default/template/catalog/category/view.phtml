@@ -35,10 +35,10 @@
     $_helper    = $this->helper('catalog/output');
     $_category  = $this->getCurrentCategory();
     $_imgHtml   = '';
-    if ($_imgUrl = $_category->getImageUrl()) {
-        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" /></p>';
-        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
-    }
+    // if ($_imgUrl = $_category->getImageUrl()) {
+    //     $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" /></p>';
+    //     $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+    // }
 ?>
 <div class="page-title category-title">
     <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
@@ -48,10 +48,6 @@
 </div>
 
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-
-<?php if($_imgUrl): ?>
-    <?php echo $_imgHtml ?>
-<?php endif; ?>
 
 <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
     <div class="category-description std">

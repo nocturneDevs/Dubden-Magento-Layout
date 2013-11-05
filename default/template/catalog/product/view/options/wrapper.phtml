@@ -24,11 +24,10 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<div class="product-options" id="product-options-wrapper">
+    <?php echo $this->getChildHtml('', true, true);?>
+    <?php if ($this->hasRequiredOptions()):?>
+        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+    <?php endif;?>
 </div>
-<div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p>
-        <address><?php echo $this->getCopyright() ?></address>
-    </div>
-</div>
+<script type="text/javascript">decorateGeneric($$('#product-options-wrapper dl'), ['last']);</script>
