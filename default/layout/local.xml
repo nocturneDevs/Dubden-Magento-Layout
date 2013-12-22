@@ -1,0 +1,11 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <reference name="head">
+                <!-- Adding jquery and twitter-bootstrap-files -->
+                <action method="addJs"><script>jquery.min.js</script></action>
+                <action method="addJs"><script>bootstrap.min.js</script></action>
+            </reference>
+        </reference>
+    </default>
+</layout>
