@@ -29,6 +29,12 @@
 ?>
 <div class="header-container">
     <div class="header">
+        <div class="quick-access">
+            <?php echo $this->getChildHtml('topLinks') ?>
+            <?php // echo $this->getChildHtml('topMenu') ?>
+            <?php echo $this->getChildHtml('topSearch') ?>
+            <?php echo $this->getChildHtml('store_language') ?>
+        </div>
         <div class="title-wrapper">
             <?php if ($this->getIsHomePage()):?>
             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
@@ -40,12 +46,6 @@
             </a>
             <?php endif?>
             <h2 class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></h2>
-        </div>
-        <div class="quick-access">
-            <?php echo $this->getChildHtml('topLinks') ?>
-            <?php // echo $this->getChildHtml('topMenu') ?>
-            <?php echo $this->getChildHtml('topSearch') ?>
-            <?php echo $this->getChildHtml('store_language') ?>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
