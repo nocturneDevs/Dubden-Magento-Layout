@@ -46,7 +46,7 @@
                 <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><!--img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /--></h1>
             </a>
             <?php endif?>
-            <h2 class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></h2>
+            <h2 class="welcome-msg"><?php echo Mage::getStoreConfig('design/header/welcome') ?></h2>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
