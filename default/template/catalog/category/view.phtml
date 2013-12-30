@@ -35,12 +35,14 @@
     $_helper    = $this->helper('catalog/output');
     $_category  = $this->getCurrentCategory();
     $_imgHtml   = '';
+    $_imgUrl = $_category->getImageUrl();
+        
     // if ($_imgUrl = $_category->getImageUrl()) {
     //     $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" /></p>';
     //     $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     // }
 ?>
-<div class="page-title category-title">
+<div class="page-title category-title" style="background-image: url(<?php echo $_imgUrl ?>)">
     <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
         <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
     <?php endif; ?>
