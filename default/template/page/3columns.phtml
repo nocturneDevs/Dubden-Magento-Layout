@@ -46,6 +46,11 @@
         <div class="col-main">
             <div id="homepage-carousel">
                 <div id="carousel-home" class="carousel slide" data-ride="carousel">
+
+                    <?php $_product = Mage::getModel('catalog/product')->loadByAttribute('name', 'Carousel'); ?>
+                    <?php $_imgs = Mage::getModel('catalog/product')->loadByAttribute('name', 'Carousel')->getMediaGalleryImages(); ?>
+                    
+
                     <ol class="carousel-indicators">
                         <li class="active" data-target="#carousel-example-generic" data-slide-to="0"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
