@@ -80,6 +80,15 @@
                 </div>
             <?php endif;?>
 
+            <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                    <div class="box-collateral-inner <?php echo "box-{$alias}-inner"?>">
+                        <?php if ($title = $this->getChildData($alias, 'title')):?>
+                        <h2><?php echo $this->escapeHtml($title); ?></h2>
+                        <?php endif;?>
+                        <?php echo $html; ?>
+                    </div>
+            <?php endforeach;?>
+
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             <?php echo $this->getChildHtml('extrahint') ?>
 
@@ -159,7 +168,7 @@
 
     <div class="product-collateral">
 <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
+        <div class="box-collateral-outer <?php echo "box-{$alias}-outer"?>">
             <?php if ($title = $this->getChildData($alias, 'title')):?>
             <h2><?php echo $this->escapeHtml($title); ?></h2>
             <?php endif;?>
