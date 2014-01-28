@@ -40,16 +40,18 @@
             <div id="logo-holder">
                 <img src="http://i.imgur.com/Sxs2q3c.png" title="Dubdengreen" class="main-logo" />
             </div>
-            <?php if ($this->getIsHomePage()):?>
-            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
-                <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><!--img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /--></h1>
-            </a>
-            <?php else:?>
-            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
-                <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><!--img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /--></h1>
-            </a>
-            <?php endif?>
-            <h2 class="welcome-msg"><?php echo Mage::getStoreConfig('design/header/welcome') ?></h2>
+            <div id="title-text">
+                <?php if ($this->getIsHomePage()):?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><!--img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /--></h1>
+                </a>
+                <?php else:?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><!--img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /--></h1>
+                </a>
+                <?php endif?>
+                <h2 class="welcome-msg"><?php echo Mage::getStoreConfig('design/header/welcome') ?></h2>
+            </div>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
