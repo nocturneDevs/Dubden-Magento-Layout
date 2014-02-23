@@ -98,6 +98,17 @@
                             <?php }
                         }
                     }
+                    else {
+                        $regularPrice = $_product->getPriceModel()->getFinalPrice(1, $_product);
+                        $newProduct = $_product;
+                        $newProduct->setCustomerGroupID(3);
+                        $memberPrice = $newProduct->getPriceModel()->getFinalPrice(1, $newProduct);
+                        if ($memberPrice < $regularPrice) { ?>
+                            <p class="member-price"><a href="http://organicbounty.com/index.php/membership/membership.html">
+                                <?php echo 'Member Price: Rs. '.round($memberPrice, 2);?>
+                            </a></p>
+                        <?php }
+                    }
                 ?>
                 <div class="product-brief"><?php echo $_product->getShortDescription(); ?></div>
             </div>
