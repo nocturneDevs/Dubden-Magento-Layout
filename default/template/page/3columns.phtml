@@ -44,6 +44,16 @@
         <?php echo $this->getChildHtml('header') ?>
         </div>
         <div class="col-main">
+            <div id="choose-store">
+                <span id="current-store">
+                    Current Store: <?php echo  Mage::app()->getWebsite()->getName(); ?>
+                </span>
+                <span id="change-store">Change Store:
+                    <a href="/del/">Delhi</a>
+                    <a href="/blr/">Bangalore</a>
+                    <a href="/roi/">Rest of India</a>
+                </span>
+            </div>
             <div id="homepage-carousel">
                 <div id="carousel-home" class="carousel slide" data-ride="carousel">
 
