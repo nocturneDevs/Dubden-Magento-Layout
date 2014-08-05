@@ -101,6 +101,21 @@
         </div>
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
+            <div class="extra-info">
+                <table class="extra-info-table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>SKU</strong>
+                            </td>
+                            <td>
+                                <?php echo $this->htmlEscape($_product->getSku()) ?>
+                            </td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <?php if ($_product->getShortDescription()):?>
             <div class="short-description outer-short-description">
@@ -178,23 +193,6 @@
                 </div>
         <?php endforeach;?>
 
-        <div class="extra-info">
-            <table class="extra-info-table">
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong>SKU</strong>
-                        </td>
-                        <td>
-                            <?php echo $this->htmlEscape($_product->getSku()) ?>
-                        </td>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        
         <?php echo $this->getChildHtml('upsell_products') ?>
         <?php echo $this->getChildHtml('product_additional_data') ?>
     </div>
