@@ -35,12 +35,23 @@
     <?php echo $this->getChildHtml('head') ?>
 </head>
 <body class="page-empty <?php echo $this->getBodyClass()?$this->getBodyClass():'' ?>">
-    <div>
-        <?php echo $this->getChildHtml('after_body_start') ?>
-        <?php echo $this->getChildHtml('global_messages') ?>
-        <?php echo $this->getChildHtml('content') ?>
-        <?php echo $this->getChildHtml('before_body_end') ?>
-        <?php echo $this->getAbsoluteFooter() ?>
+  <?php echo $this->getChildHtml('after_body_start') ?>
+  <div class="wrapper">
+    <?php echo $this->getChildHtml('global_messages') ?>
+    <div class="page">
+      <div class="title-wrapper">
+          <div id="logo-holder">
+              <img src="http://i.imgur.com/Sxs2q3c.png" title="Dubdengreen" class="main-logo" />
+          </div>
+          <div id="title-text">
+            <h1 class="logo"><strong><?php echo Mage::getStoreConfig('design/header/logo_alt') ?></strong></h1>
+            <h2 class="welcome-msg"><?php echo Mage::getStoreConfig('design/header/welcome') ?></h2>
+          </div>
+      </div>
+      <?php echo $this->getChildHtml('content') ?>
+      <?php echo $this->getChildHtml('before_body_end') ?>
+      <?php echo $this->getAbsoluteFooter() ?>
     </div>
+  </div>
 </body>
 </html>
