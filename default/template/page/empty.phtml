@@ -33,6 +33,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
 <head>
     <?php echo $this->getChildHtml('head') ?>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body class="page-empty <?php echo $this->getBodyClass()?$this->getBodyClass():'' ?>">
   <?php echo $this->getChildHtml('after_body_start') ?>
@@ -49,6 +50,16 @@
           </div>
       </div>
       <?php echo $this->getChildHtml('content') ?>
+      <div id="store-location-info" class="landing-info">
+        <i class="fa fa-institution fa-4x"></i>
+        <h3> Why choose a store? </h3>
+        <p> This enables us to display location-specific products and pricing. For instance, fruits and vegetables are sourced fresh from organic farms, and are    available only in certain locations. </p>
+      </div>
+      <div id="cash-on-delivery-info" class="landing-info">
+        <i class="fa fa-money fa-4x"></i>
+        <h3> Cash on Delivery! </h3>
+        <p> We now support cash on delivery in Bangalore and Delhi for all orders above Rs 1501! </p>
+      </div>
       <?php echo $this->getChildHtml('before_body_end') ?>
       <?php echo $this->getAbsoluteFooter() ?>
     </div>
